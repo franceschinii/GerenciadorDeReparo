@@ -1,0 +1,16 @@
+flowchart TD
+    A[SplashScreen] -->|Carregando...| B(HomePage)
+    B -->|Escolher opções| C{Opções}
+
+    C -->|Visualizar Oficina| D[Visualização]
+    C -->|Gerenciar Oficina| E[Gerenciador]
+
+    D -->|Ver fila completa| DD{Opções}
+    
+    DD -->|Mostrar lista completa| DDA(Lista completa)
+    DD -->|Buscar veículo| DDB(Informação Veículo)
+
+    E -->|Gerenciar veículos| EE{Opções}
+
+    EE -->|Registrar novo veículo| EEA(Inserção Veículo)
+    EE -->|Atualizar veículo existente| EEB(Liberar Veículo)
