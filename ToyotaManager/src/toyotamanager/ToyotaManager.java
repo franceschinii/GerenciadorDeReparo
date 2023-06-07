@@ -4,6 +4,8 @@
  */
 package toyotamanager;
 
+import views.splash;
+
 /**
  *
  * @author UnknownAccount
@@ -14,7 +16,8 @@ public class ToyotaManager {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        splash page = new splash();
+        page.setVisible(true);
     }
     
 }
