@@ -31,6 +31,7 @@ public class report extends javax.swing.JFrame {
     private void initComponents() {
 
         Panel = new javax.swing.JPanel();
+        ButtonBack = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -38,6 +39,16 @@ public class report extends javax.swing.JFrame {
         setResizable(false);
 
         Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ButtonBack.setBorder(null);
+        ButtonBack.setBorderPainted(false);
+        ButtonBack.setContentAreaFilled(false);
+        ButtonBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonBackActionPerformed(evt);
+            }
+        });
+        Panel.add(ButtonBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 30, 30));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/table.png"))); // NOI18N
         Panel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -59,6 +70,12 @@ public class report extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackActionPerformed
+        home page = new home();
+        page.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ButtonBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,6 +114,7 @@ public class report extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
+    private javax.swing.JButton ButtonBack;
     private javax.swing.JPanel Panel;
     // End of variables declaration//GEN-END:variables
 }

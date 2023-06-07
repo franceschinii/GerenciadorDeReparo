@@ -31,7 +31,8 @@ public class managerRegister extends javax.swing.JFrame {
     private void initComponents() {
 
         Panel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        ButtonBack = new javax.swing.JButton();
+        Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Toyota Manager Register");
@@ -39,8 +40,18 @@ public class managerRegister extends javax.swing.JFrame {
 
         Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/managerRegister.png"))); // NOI18N
-        Panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        ButtonBack.setBorder(null);
+        ButtonBack.setBorderPainted(false);
+        ButtonBack.setContentAreaFilled(false);
+        ButtonBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonBackActionPerformed(evt);
+            }
+        });
+        Panel.add(ButtonBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 30, 30));
+
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/managerRegister.png"))); // NOI18N
+        Panel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -59,6 +70,12 @@ public class managerRegister extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackActionPerformed
+        manager page = new manager();
+        page.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ButtonBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,7 +113,8 @@ public class managerRegister extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Background;
+    private javax.swing.JButton ButtonBack;
     private javax.swing.JPanel Panel;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

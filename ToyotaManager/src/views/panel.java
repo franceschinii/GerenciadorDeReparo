@@ -31,6 +31,9 @@ public class panel extends javax.swing.JFrame {
     private void initComponents() {
 
         Panel = new javax.swing.JPanel();
+        ButtonBack = new javax.swing.JButton();
+        ButtonView = new javax.swing.JButton();
+        ButtonSearch = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -38,6 +41,36 @@ public class panel extends javax.swing.JFrame {
         setResizable(false);
 
         Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ButtonBack.setBorder(null);
+        ButtonBack.setBorderPainted(false);
+        ButtonBack.setContentAreaFilled(false);
+        ButtonBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonBackActionPerformed(evt);
+            }
+        });
+        Panel.add(ButtonBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 30, 30));
+
+        ButtonView.setBorder(null);
+        ButtonView.setBorderPainted(false);
+        ButtonView.setContentAreaFilled(false);
+        ButtonView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonViewActionPerformed(evt);
+            }
+        });
+        Panel.add(ButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 260, 50));
+
+        ButtonSearch.setBorder(null);
+        ButtonSearch.setBorderPainted(false);
+        ButtonSearch.setContentAreaFilled(false);
+        ButtonSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSearchActionPerformed(evt);
+            }
+        });
+        Panel.add(ButtonSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 420, 260, 50));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/panel.png"))); // NOI18N
         Panel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -59,6 +92,22 @@ public class panel extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackActionPerformed
+        home page = new home();
+        page.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ButtonBackActionPerformed
+
+    private void ButtonViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonViewActionPerformed
+
+    }//GEN-LAST:event_ButtonViewActionPerformed
+
+    private void ButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSearchActionPerformed
+        panelSearch page = new panelSearch();
+        page.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ButtonSearchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,6 +146,9 @@ public class panel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
+    private javax.swing.JButton ButtonBack;
+    private javax.swing.JButton ButtonSearch;
+    private javax.swing.JButton ButtonView;
     private javax.swing.JPanel Panel;
     // End of variables declaration//GEN-END:variables
 }

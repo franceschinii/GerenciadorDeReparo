@@ -31,6 +31,9 @@ public class home extends javax.swing.JFrame {
     private void initComponents() {
 
         Panel = new javax.swing.JPanel();
+        ButtonPanel = new javax.swing.JButton();
+        ButtonManager = new javax.swing.JButton();
+        ButtonReport = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -38,6 +41,37 @@ public class home extends javax.swing.JFrame {
         setResizable(false);
 
         Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ButtonPanel.setBorder(null);
+        ButtonPanel.setBorderPainted(false);
+        ButtonPanel.setContentAreaFilled(false);
+        ButtonPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonPanelActionPerformed(evt);
+            }
+        });
+        Panel.add(ButtonPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 240, 60));
+
+        ButtonManager.setBorder(null);
+        ButtonManager.setBorderPainted(false);
+        ButtonManager.setContentAreaFilled(false);
+        ButtonManager.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonManagerActionPerformed(evt);
+            }
+        });
+        Panel.add(ButtonManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 240, 60));
+
+        ButtonReport.setBorder(null);
+        ButtonReport.setBorderPainted(false);
+        ButtonReport.setContentAreaFilled(false);
+        ButtonReport.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        ButtonReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonReportActionPerformed(evt);
+            }
+        });
+        Panel.add(ButtonReport, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 470, 240, 60));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/home.png"))); // NOI18N
         Panel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -59,6 +93,24 @@ public class home extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ButtonManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonManagerActionPerformed
+        manager page = new manager();
+        page.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ButtonManagerActionPerformed
+
+    private void ButtonPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPanelActionPerformed
+        panel page = new panel();
+        page.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ButtonPanelActionPerformed
+
+    private void ButtonReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonReportActionPerformed
+        report page = new report();
+        page.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ButtonReportActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,6 +149,9 @@ public class home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
+    private javax.swing.JButton ButtonManager;
+    private javax.swing.JButton ButtonPanel;
+    private javax.swing.JButton ButtonReport;
     private javax.swing.JPanel Panel;
     // End of variables declaration//GEN-END:variables
 }
