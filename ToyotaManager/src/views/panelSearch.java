@@ -4,6 +4,7 @@
  */
 package views;
 
+import java.awt.Color;
 import java.awt.Toolkit;
 
 /**
@@ -11,7 +12,15 @@ import java.awt.Toolkit;
  * @author UnknownAccount
  */
 public class panelSearch extends javax.swing.JFrame {
-
+    
+    public void fixDesign() {
+        Model.setOpaque(false);
+        Model.setBackground(new Color(0, 0, 0, 0));
+        
+        Body.setOpaque(false);
+        Body.setBackground(new Color(0, 0, 0, 0));
+    }
+    
     /**
      * Creates new form panelSearch
      */
@@ -19,6 +28,7 @@ public class panelSearch extends javax.swing.JFrame {
         initComponents();
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../media/toyota.png")));
         setLocationRelativeTo(null);
+        fixDesign();
     }
 
     /**
@@ -32,6 +42,9 @@ public class panelSearch extends javax.swing.JFrame {
 
         Panel = new javax.swing.JPanel();
         ButtonBack = new javax.swing.JButton();
+        Model = new javax.swing.JTextField();
+        Body = new javax.swing.JTextField();
+        ButtonConfirm = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,6 +62,26 @@ public class panelSearch extends javax.swing.JFrame {
             }
         });
         Panel.add(ButtonBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 30, 30));
+
+        Model.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Model.setForeground(new java.awt.Color(255, 255, 255));
+        Model.setBorder(null);
+        Panel.add(Model, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 250, 240, 33));
+
+        Body.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Body.setForeground(new java.awt.Color(255, 255, 255));
+        Body.setBorder(null);
+        Panel.add(Body, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 330, 240, 33));
+
+        ButtonConfirm.setBorder(null);
+        ButtonConfirm.setBorderPainted(false);
+        ButtonConfirm.setContentAreaFilled(false);
+        ButtonConfirm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonConfirmActionPerformed(evt);
+            }
+        });
+        Panel.add(ButtonConfirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 270, 60));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/panelSearch.png"))); // NOI18N
         Panel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -76,6 +109,10 @@ public class panelSearch extends javax.swing.JFrame {
         page.setVisible(true);
         dispose();
     }//GEN-LAST:event_ButtonBackActionPerformed
+
+    private void ButtonConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonConfirmActionPerformed
+
+    }//GEN-LAST:event_ButtonConfirmActionPerformed
 
     /**
      * @param args the command line arguments
@@ -114,7 +151,10 @@ public class panelSearch extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
+    private javax.swing.JTextField Body;
     private javax.swing.JButton ButtonBack;
+    private javax.swing.JButton ButtonConfirm;
+    private javax.swing.JTextField Model;
     private javax.swing.JPanel Panel;
     // End of variables declaration//GEN-END:variables
 }
