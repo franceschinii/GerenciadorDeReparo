@@ -5,6 +5,7 @@
 package views;
 
 import java.awt.Toolkit;
+import toyotamanager.ToyotaManager;
 
 /**
  *
@@ -100,7 +101,7 @@ public class panel extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonBackActionPerformed
 
     private void ButtonViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonViewActionPerformed
-
+        ToyotaManager.mostrarOficina();
     }//GEN-LAST:event_ButtonViewActionPerformed
 
     private void ButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSearchActionPerformed

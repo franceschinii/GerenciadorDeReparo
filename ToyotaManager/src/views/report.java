@@ -5,6 +5,7 @@
 package views;
 
 import java.awt.Toolkit;
+import toyotamanager.ToyotaManager;
 
 /**
  *
@@ -19,6 +20,7 @@ public class report extends javax.swing.JFrame {
         initComponents();
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../media/toyota.png")));
         setLocationRelativeTo(null);
+        ToyotaManager.gerarRelatorio();
     }
 
     /**

@@ -6,6 +6,7 @@ package views;
 
 import java.awt.Color;
 import java.awt.Toolkit;
+import toyotamanager.ToyotaManager;
 
 /**
  *
@@ -120,7 +121,7 @@ public class managerUpdate extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonBackActionPerformed
 
     private void ButtonConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonConfirmActionPerformed
-
+        ToyotaManager.atualizarVeiculo(Model.getText(), Body.getText(), Status.getText());
     }//GEN-LAST:event_ButtonConfirmActionPerformed
 
     /**

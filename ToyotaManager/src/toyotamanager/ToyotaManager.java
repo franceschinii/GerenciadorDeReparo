@@ -11,7 +11,8 @@ import views.splash;
  * @author UnknownAccount
  */
 public class ToyotaManager {
-
+    private static int valor = 0;
+    
     /**
      * @param args the command line arguments
      */
@@ -20,4 +21,23 @@ public class ToyotaManager {
         page.setVisible(true);
     }
     
+    public static void mostrarOficina() {
+        // Implementar Codigo
+    }
+
+    public static void buscarVeiculo(String modelo, String body) {
+        // Implementar Codigo
+    }
+    
+    public static void registrarVeiculo(String modelo, String body, String status) {
+        // Implementar Codigo
+    }
+    
+    public static void atualizarVeiculo(String modelo, String body, String status) {
+        // Implementar Codigo
+    }
+    
+    public static void gerarRelatorio() {
+        // Implementar Codigo
+    }
 }

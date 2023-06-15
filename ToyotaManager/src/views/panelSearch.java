@@ -6,6 +6,7 @@ package views;
 
 import java.awt.Color;
 import java.awt.Toolkit;
+import toyotamanager.ToyotaManager;
 
 /**
  *
@@ -111,7 +112,7 @@ public class panelSearch extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonBackActionPerformed
 
     private void ButtonConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonConfirmActionPerformed
-
+        ToyotaManager.buscarVeiculo(Model.getText(), Body.getText());
     }//GEN-LAST:event_ButtonConfirmActionPerformed
 
     /**
